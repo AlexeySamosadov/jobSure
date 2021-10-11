@@ -1,0 +1,16 @@
+@media only screen and (min-width: 1280px){
+  .menu-container {
+    min-width: 1240px;
+}
+}
+
+.footer-row {
+  justify-content: space-between;
+}
+
+.cooperation-HTML_Academy {
+  justify-content: flex-end;
+}
+.cooperation_button {
+  margin-top: 40px
+}
