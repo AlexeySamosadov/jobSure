@@ -1,0 +1,51 @@
+ <section id="section-contact" data-bgimage="url(images/background/bg-2.png) bottom #e4e6e9">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="text-center">
+                            <h2>Напишите нам</h2>
+                            <div class="small-border"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8 offset-md-2 wow fadeInUp">
+                        <form name="contactForm" id='contact_form' class="form-default" method="post" action='email.php'>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div id='name_error' class='error'>Напишите свое имя.</div>
+                                    <div>
+                                        <input type='text' name='name' id='name' class="form-control" placeholder="Ваше имя">
+                                    </div>
+
+                                    <div id='email_error' class='error'>E-mail адрес.</div>
+                                    <div>
+                                        <input type='text' name='email' id='email' class="form-control" placeholder="Email">
+                                    </div>
+
+                                    <div id='phone_error' class='error'>Ваш номер телефона.</div>
+                                    <div>
+                                        <input type='text' name='phone' id='phone' class="form-control" placeholder="Ваш номер телефона">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div id='message_error' class='error'>Расскажите о своем опыте, пройденных курсах и обучении.</div>
+                                    <div>
+                                        <textarea name='message' id='message' class="form-control" placeholder="Расскажите о своем опыте: пройденных курсах и обучении,проходили ли собеседования "></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 text-center">
+                                    <div id='submit'>
+                                        <input type='submit' id='send_message' value='Отправить' class="btn-custom">
+                                    </div>
+                                    <div id='mail_success' class='success'>Ваше сообщение отправлено.</div>
+                                    <div id='mail_fail' class='error'>Извините, сообщение не удалось отправить.</div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>

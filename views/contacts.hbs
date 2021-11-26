@@ -1,0 +1,90 @@
+        <div class="no-bottom no-top" id="content">
+            <div id="top"></div>
+            <!-- section begin -->
+            <section id="section-home" aria-label="section" class="text-light" aria-label="section" data-bgimage="url(images/background/bg-subheader-3.jpg) top" data-stellar-background-ratio=".2" data>
+                <div class="center-y relative text-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <h1 class="mt30 wow fadeInUp" data-wow-delay=".6s">Контакты</h1>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- section close -->
+            <section aria-label="section" data-bgimage="url(images/background/bg-1.png) bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="sm-icon mb30 padding20 rounded bg-color-op-1">
+                                <i class="bg-color fa fa-map-marker"></i>
+                                <div class="si-inner">
+                                    <h5>онлайн</h5>
+                                    по всему миру
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="sm-icon mb30 padding20 rounded bg-color-op-1">
+                                <i class="bg-color fa fa-calendar-check-o"></i>
+                                <div class="si-inner">
+                                    <h5>Номер телефона</h5>
+                                  +79263737229
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="sm-icon mb30 padding20 rounded bg-color-op-1">
+                                <i class="bg-color fa fa-users"></i>
+                                <div class="si-inner">
+                                    <h5>Email</h5>
+                                    <a href="contact@example.com">contact@jobsure.ru</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="spacer-single"></div>
+                        <div class="col-md-12">
+                            <div class="text-center mb30">
+                                <h4>Напишите нам</h4>
+                            </div>
+                            <form name="contactForm" id='contact_form' class="form-default" method="post" action='email.php'>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div id='name_error' class='error'>Напишите свое имя.</div>
+                                        <div>
+                                            <input type='text' name='Имя' id='name' class="form-control" placeholder="Ваше имя">
+                                        </div>
+
+                                        <div id='email_error' class='error'>Напишите свой E-mail.</div>
+                                        <div>
+                                            <input type='text' name='email' id='email' class="form-control" placeholder="Ваш Email">
+                                        </div>
+
+                                        <div id='phone_error' class='error'>Напишите свой номер телефона.</div>
+                                        <div>
+                                            <input type='text' name='номер телефона' id='phone' class="form-control" placeholder="Ваш номер телефона">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div id='message_error' class='error'>Please enter your message.</div>
+                                        <div>
+                                            <textarea name='message' id='message' class="form-control" placeholder="Ваше сообщение"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 text-center">
+                                        <div id='Отправить сообщение'>
+                                            <input type='отправить' id='send_message' value='отправить' class="btn-custom">
+                                        </div>
+                                        <div id='mail_success' class='success'>Your message has been sent successfully.</div>
+                                        <div id='mail_fail' class='error'>Sorry, error occured this time sending your message.</div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
