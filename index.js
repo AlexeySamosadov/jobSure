@@ -2,6 +2,8 @@ const express  = require('express');
 const app = express();
 const path = require('path');
 const exphbs = require('express-handlebars');
+const compression = require('compression');
+
 
 // Импорт модели дата:
 const Course = require('./models/course')
@@ -24,6 +26,17 @@ const hbs  = exphbs.create({
 
 })
 
+app.use(compression({
+   level: 9,
+   threshold: 10,
+   filter: (req, res) => {
+      if(req.headers['x-no-compression']) {
+         return false
+      }
+      return compression.filter(req, res)
+   }
+}))
+ 
 app.engine('hbs', hbs.engine)
 app.set('view engine', 'hbs')
 app.set('views', 'views')
