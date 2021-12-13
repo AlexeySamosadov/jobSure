@@ -18,6 +18,8 @@ const faqRoutes = require('./routes/faq');
 
 
 const addRoutes = require('./routes/add');
+const reservationRoutes = require('./routes/reservation');
+
 const coursesRoutes = require('./routes/courses');
 
 const hbs  = exphbs.create({
@@ -56,6 +58,8 @@ app.use('/contacts', contactsRoutes)
 app.use('/privacy-policy', privacyPolicyRoutes)
 app.use('/faq', faqRoutes)
 app.use('/add', addRoutes)
+app.use('/reservation', reservationRoutes)
+
 app.use('/courses', coursesRoutes)
 
 
