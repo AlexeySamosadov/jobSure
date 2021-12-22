@@ -35,7 +35,6 @@ const hbs  = exphbs.create({
    helpers: {
       formatDate: function(date) {
          return moment(date).format('DD MMMM YYYY')
-         // return moment().formatDate();
       },
       getMonth: function(date) {
          return moment(date).format('MMMM').slice(0,3)

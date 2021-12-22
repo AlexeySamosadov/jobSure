@@ -3,16 +3,10 @@ const router = Router();
 const Article = require('../models/article');
 
 
-router.get('/', async (req, res)=> {
-   const articl  = await Article.find()
-   const articles = JSON.parse(JSON.stringify(articl)) 
-
-   const article = articles.find((art => art.number === req.query.article))
-   console.log('article', article.date)
-
-
-
-
+router.get('/:id', async (req, res)=> {
+   const articlesMongoose  = await Article.find()
+   const articles = JSON.parse(JSON.stringify(articlesMongoose)) 
+   const article = articles.find((art => art.number === req.params.id))
 
 //    const article = new Article({
 //       date: new Date('October 22, 2021'),
