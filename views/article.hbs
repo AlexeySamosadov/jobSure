@@ -62,12 +62,17 @@
                                     <li>{{this}}</li>
                                 {{/each}}
                             </ul>
-                            <h4>{{article.list2Tittle}}</h4>
-                            <ul class="ul-style-2">
-                                {{#each article.list2items}}
-                                    <li>{{this}}</li>
-                                {{/each}}
-                            </ul>
+                            {{#if article.list2Tittle}}
+                                <h4>{{article.list2Tittle}}</h4>    
+                            {{/if}}
+                            {{#if article.list2Iitems}}
+                                <ul class="ul-style-2">
+                                    {{#each article.list2items}}
+                                        <li>{{this}}</li>
+                                    {{/each}}
+                                </ul>                       
+                            {{/if}}
+
                             <div class="spacer-single"></div>
 
                             <h4>{{article.promoText}}</h4>
