@@ -4,12 +4,9 @@ const Article = require('../models/article');
 
 
 router.get('/', async (req, res)=> {
-   // const number = req.req.number
-   // console.log('req', req.query.article)
    const articl  = await Article.find()
    const articles = JSON.parse(JSON.stringify(articl)) 
 
-   // const date1 = new Date('October 22, 2021');
    const article = articles.find((art => art.number === req.query.article))
    console.log('article', article.date)
 

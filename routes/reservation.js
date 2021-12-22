@@ -7,7 +7,8 @@ router.get('/', (req, res)=>{
    console.log('req', req);
     res.render('reservation', {
        title: "Записаться на консультацию",
-       isAdd: true
+       isAdd: true,
+       isLightMenu: true,
     })
  })
 
