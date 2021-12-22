@@ -7,7 +7,6 @@ router.get('/:id', async (req, res)=> {
    const articlesMongoose  = await Article.find()
    const articles = JSON.parse(JSON.stringify(articlesMongoose)).sort((a, b) => b.number - a.number);
    const article = articles.find((art => art.number === req.params.id))
-   console.log('articles', articles)
 
 //    const article = new Article({
 //       date: new Date('October 22, 2021'),

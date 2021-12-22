@@ -8,4 +8,14 @@ router.get('/', (req, res)=>{
     })
  })
 
+ router.post('/', (req, res)=>{
+    console.log('ip', req.ip)
+   console.log('req', req.body)
+   const data = req.body
+   res.render('contacts', {
+      title: 'Контакты',
+      isLightMenu: true
+   })
+})
+
 module.exports = router;
