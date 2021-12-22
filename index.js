@@ -3,6 +3,11 @@ const app = express();
 const path = require('path');
 const exphbs = require('express-handlebars');
 const compression = require('compression');
+const mongoose = require('mongoose')
+const moment = require('moment');
+moment.locale('ru');
+
+
 
 
 // Импорт модели дата:
@@ -15,6 +20,7 @@ const pricesRoutes = require('./routes/prices');
 const contactsRoutes = require('./routes/contacts');
 const privacyPolicyRoutes = require('./routes/privacy-policy');
 const faqRoutes = require('./routes/faq');
+const articleRoutes = require('./routes/article');
 
 
 const addRoutes = require('./routes/add');
@@ -24,7 +30,20 @@ const coursesRoutes = require('./routes/courses');
 
 const hbs  = exphbs.create({
    defaultLayout: 'main',
-   extname: 'hbs'
+   extname: 'hbs',
+
+   helpers: {
+      formatDate: function(date) {
+         return moment(date).format('DD MMMM YYYY')
+         // return moment().formatDate();
+      },
+      getMonth: function(date) {
+         return moment(date).format('MMMM').slice(0,3)
+      },
+      getDay: function(date) {
+         return moment(date).format('DD')
+      }
+   }
 
 })
 
@@ -59,6 +78,7 @@ app.use('/privacy-policy', privacyPolicyRoutes)
 app.use('/faq', faqRoutes)
 app.use('/add', addRoutes)
 app.use('/reservation', reservationRoutes)
+app.use('/article', articleRoutes)
 
 app.use('/courses', coursesRoutes)
 
@@ -67,6 +87,22 @@ app.use('/courses', coursesRoutes)
 
 const PORT = process.env.PORT || 3000
 
-app.listen(PORT, ()=>{
-   console.log(`Server is running on port ${PORT}`);
-})
+async function start() {
+   try {
+     // const url = `mongodb+srv://alexey:1qa2ws3ed@cluster0.thlim.mongodb.net/shop`,
+     const url = `mongodb+srv://alexey:1qa2ws3ed@cluster0.thlim.mongodb.net/jobSure?retryWrites=true&w=majority`
+     await mongoose.connect(url, {
+       useNewUrlParser: true,
+      //  useFindAndModify: false,
+       useUnifiedTopology: true
+     })
+ 
+      app.listen(PORT, () => {
+       console.log(`Server is running on port ${PORT}`)
+     })
+   } catch (e) {
+     console.log(e)
+   }
+ }
+ 
+ start()
