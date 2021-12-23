@@ -28,6 +28,8 @@
                         <div class="col-md-8">
                             <p>{{article.text}}
                             </p>
+                            <p>{{article.text2}}
+                            </p>
                         </div>
                     </div>
                     <div class="spacer-single"></div>
@@ -56,7 +58,9 @@
                             </div>
                         </div>
                         <div class="col-md-8">
-                            <h4>{{article.listTitle}}</h4>
+                            {{#if article.listTitle}}
+                                <h4>{{article.listTitle}}</h4>    
+                            {{/if}}
                             <ul class="ul-style-2">
                                 {{#each article.listItems}}
                                     <li>{{this}}</li>
@@ -65,9 +69,20 @@
                             {{#if article.list2Tittle}}
                                 <h4>{{article.list2Tittle}}</h4>    
                             {{/if}}
-                            {{#if article.list2Iitems}}
+                            {{#if article.list2Items}}
                                 <ul class="ul-style-2">
-                                    {{#each article.list2items}}
+                                    {{#each article.list2Items}}
+                                        <li>{{this}}</li>
+                                    {{/each}}
+                                </ul>                       
+                            {{/if}}
+
+                            {{#if article.list3Tittle}}
+                                <h4>{{article.list3Tittle}}</h4>    
+                            {{/if}}
+                            {{#if article.list3Items}}
+                                <ul class="ul-style-2">
+                                    {{#each article.list3Items}}
                                         <li>{{this}}</li>
                                     {{/each}}
                                 </ul>                       
