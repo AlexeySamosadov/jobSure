@@ -13,13 +13,20 @@
                                            {{getDay this.date}}<span>{{getMonth this.date}}</span>
                                         </div>
                                         <div class="cover">
-                                            <a href="/article/{{this.number}}">
-                                                <div class="c-inner">
+                                            <div class="c-inner">
+                                                <a href="/article/{{this.number}}">
                                                     <h3><i class="fa fa-circle-thin"></i><span>{{this.title}}</span></h3>
+                                                </a>
+                                                <a href="/article/{{this.number}}">
                                                     <p>{{this.previewText}}</p>
-                                                    <div class="spacer20"></div>
-                                                    <a href="/article/{{this.number}}" class="btn-custom capsule">Подробнее</a>
-                                                </div>
+                                                </a>
+                                                <div class="spacer20"></div>
+                                                <a href="/article/{{this.number}}" class="btn-custom capsule">Подробнее</a>
+                                            </div>     
+
+                                            
+                                            <a href="/article/{{this.number}}">
+                                                
                                             </a>
                                         </div>
                                         <img src="{{this.previewImageUrl}}" alt="{{this.title}}" class="img-responsive" />
