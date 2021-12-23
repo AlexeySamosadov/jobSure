@@ -21,6 +21,7 @@ const contactsRoutes = require('./routes/contacts');
 const privacyPolicyRoutes = require('./routes/privacy-policy');
 const faqRoutes = require('./routes/faq');
 const articleRoutes = require('./routes/article');
+const mailingRoutes = require('./routes/mailing');
 
 
 const addRoutes = require('./routes/add');
@@ -77,7 +78,8 @@ app.use('/privacy-policy', privacyPolicyRoutes)
 app.use('/faq', faqRoutes)
 app.use('/add', addRoutes)
 app.use('/reservation', reservationRoutes)
-app.use('/article', articleRoutes)
+app.use('/article', articleRoutes) 
+app.use('/mailing', mailingRoutes)
 
 app.use('/courses', coursesRoutes)
 

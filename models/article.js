@@ -1,6 +1,4 @@
 const {Schema, model} = require('mongoose')
-const Article = require('../models/article')
-
 
 const articleSchema = new Schema({
     title: String,

@@ -54,23 +54,23 @@
                                     <div class="col-md-6">
                                         <div id='name_error' class='error'>Напишите свое имя.</div>
                                         <div>
-                                            <input type='text' name='Имя' id='name' class="form-control" placeholder="Ваше имя">
+                                            <input type='text' name='name' id='name' class="form-control" placeholder="Ваше имя" required>
                                         </div>
 
                                         <div id='email_error' class='error'>Напишите свой E-mail.</div>
                                         <div>
-                                            <input type='text' name='email' id='email' class="form-control" placeholder="Ваш Email">
+                                            <input type='email' name='email' id='email' class="form-control" placeholder="Ваш Email" required>
                                         </div>
 
                                         <div id='phone_error' class='error'>Напишите свой номер телефона.</div>
                                         <div>
-                                            <input type='text' name='номер телефона' id='phone' class="form-control" placeholder="Ваш номер телефона">
+                                            <input type='text' name='telephoneNumber' id='phone' class="form-control" placeholder="Ваш номер телефона">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div id='message_error' class='error'>Please enter your message.</div>
                                         <div>
-                                            <textarea name='message' id='message' class="form-control" placeholder="Ваше сообщение"></textarea>
+                                            <textarea name='message' id='message' class="form-control" placeholder="Ваше сообщение" ></textarea>
                                         </div>
                                     </div>
 
@@ -79,9 +79,23 @@
                                             <button class="btn-custom" id='contact_form'>отправить</button>
                                             {{!-- <input type='отправить' id='send_message' value='отправить' class="btn-custom"> --}}
                                         </div>
-                                        <div id='mail_success' class='success'>Your message has been sent successfully.</div>
-                                        <div id='mail_fail' class='error'>Sorry, error occured this time sending your message.</div>
+
+                                        {{#if isSuccesMessage}}
+                                            <div id='mail_success' class='success d-block'>
+                                                {{#if mesengerName}}
+                                                    {{mesengerName}}: ваше сообщение успешно отправлено.
+                                                {{else}}
+                                                    Ваше сообщение успешно отправлено.
+                                                {{/if}}
+                                            </div>
+                                        {{/if}}
+
+                                        {{#if isErrorMessage}}
+                                            <div id='mail_fail' class='error d-block'>Извините, возникла ошибка во время отправки сообщения.</div>
+                                        {{/if}}
+
                                     </div>
+                                    
                                 </div>
                             </form>
                         </div>
