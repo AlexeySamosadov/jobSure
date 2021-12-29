@@ -54,3 +54,9 @@
 	width: 1px !important; 
 	overflow: hidden;
 }
+
+
+.de-flex>.de-flex-col > #menu-btn {
+  background: none !important;
+  color: black;
+}

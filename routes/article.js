@@ -38,7 +38,6 @@ router.get('/:id', async (req, res)=> {
 //       } catch (e) {
 //          console.log(e)
 //       }
-   console.log('article', article)
 
     res.render('article', {
        title: article.title,
