@@ -38,9 +38,9 @@ router.get('/:id', async (req, res)=> {
 //       } catch (e) {
 //          console.log(e)
 //       }
-
+      console.log(' article.title',  article?.title)
     res.render('article', {
-       title: article.title,
+       title: article?.title,
        isLightMenu: true,
        article,
        articles
